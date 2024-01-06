@@ -3,7 +3,8 @@ const cors = require('cors');
 var cookieParser = require('cookie-parser');
 const applyMiddleware = (app) => {
     app.use(cors({
-        origin: ["http://localhost:3000"],
+        origin: ["https://a1gfx.vercel.app"],
+        // origin: ["http://localhost:3000"],
         credentials: true,
     })
     );
