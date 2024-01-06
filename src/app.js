@@ -7,16 +7,17 @@ const applyMiddleware = require("./middleware/applyMiddleware");
 const cors = require('cors');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 
-const postHandler = require("./router/postHandler");
 applyMiddleware(app);
+const postHandler = require("./router/postHandler");
+const commentHandler = require("./router/commentHandler");
 app.use(postHandler);
+app.use(commentHandler);
 
 
 
 
 const main = async () => {
     await connectDB();
-
     app.listen(port, () => {
         console.log(`Server is running on ${port}`);
     });

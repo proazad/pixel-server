@@ -5,6 +5,9 @@ const PostsSchema = new Schema({
     title: {
         type: String,
     },
+    featureImage: {
+        type: String,
+    },
     afterImage: {
         type: String,
     },

@@ -47,7 +47,8 @@ router.put("/posts/:id", async (req, res) => {
     const filter = { _id: id }
     const updateDoc = {
         $set: {
-            title: course.title,
+            title: post.title,
+            beforeImage: post.beforeImage,
             afterImage: post.afterImage,
             beforeImage: post.beforeImage,
             views: post.views,
